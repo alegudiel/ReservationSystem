@@ -1,0 +1,11 @@
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-info strong {
+    font-weight: bold;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}

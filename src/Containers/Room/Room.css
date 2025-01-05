@@ -1,0 +1,22 @@
+/* Room.css */
+.reserve-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.reserve-button:hover {
+    background-color: #45a049;
+}
+
+.reserve-button:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+}
+
