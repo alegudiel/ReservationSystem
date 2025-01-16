@@ -20,3 +20,12 @@
     cursor: not-allowed;
 }
 
+.room-info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.room-info p {
+    margin: 0;
+}

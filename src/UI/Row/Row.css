@@ -1,11 +1,12 @@
 .row {
         display: flex;
         flex-wrap: wrap;
+        align-items:center ;
     }
     
-.row-align-left {
+/* .row-align-left {
         align-items: flex-start;
-    }
+    } */
     
 .row-align-center {
         align-items: center;
@@ -15,9 +16,9 @@
         align-items: flex-end;
     }
     
-.row-justify-flex-start {
+/* .row-justify-flex-start {
         justify-content: flex-start;
-    }
+    } */
     
 .row-justify-center {
         justify-content: center;

@@ -28,7 +28,7 @@ const Availability = ({ selectedDate, selectedHostel, onRoomSelect }) => {
             {selectedDate && (
                 <Row>
                     {Object.keys(availability).map((roomType, index) => (
-                        <Cell key={index}>
+                        <Cell xs={3} key={index}>
                             <Typography type="subtitle">{roomType}</Typography>
                             <Typography type="body">Habitaciones disponibles: {availability[roomType]}</Typography>
                             <button className='reservation-select-button'

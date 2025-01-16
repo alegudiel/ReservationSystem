@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Reservations.css';
 import Container from '../../UI/Container/Container';
 import Row from '../../UI/Row/Row';
@@ -7,12 +7,27 @@ import Typography from '../../UI/Typography/Typography';
 import RoomCard from '../../Components/RoomCard/RoomCard';
 import DatePicker from '../../Components/DatePicker/DatePicker';
 import Availability from '../../Components/Availability/Availability';
-import hostels from '../../Data/hostels';
+import { getData } from '../../api/services';
 
 const Reservations = () => {
+    const [hostels, setHostels] = useState([])
     const [selectedHostel, setSelectedHostel] = useState(null);
     const [selectedDate, setSelectedDate] = useState(null);
     const [selectedRoom, setSelectedRoom] = useState(null);
+
+    const getHotels = async () => {
+        try {
+            const hostelsData = await getData('/api/hotels/');
+            setHostels(hostelsData)
+        } catch (error) {
+            console.error('Error al obtener hoteles:', error);
+            throw error;
+        }
+    };
+
+    useEffect(() =>{
+        getHotels();
+    }, [])
 
     return (
         <Container>
@@ -20,12 +35,12 @@ const Reservations = () => {
             {!selectedHostel ? (
                 <Row>
                     {hostels.map((hostel) => (
-                        <Cell key={hostel.id}>
+                        <Cell key={hostel.idHotel}>
                             <RoomCard
-                                hostelId={hostel.id}
+                                hostelId={hostel.idHotel}
                                 name={hostel.name}
                                 description={hostel.description}
-                                onClick={() => setSelectedHostel(hostel)}
+                                onClick={() => setSelectedHostel(hostel.idHotel)}
                             />
                         </Cell>
                     ))}
