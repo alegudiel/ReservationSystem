@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# Reservation System - Inspired by IRTRA Hostels
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Reservation System! This project is inspired by the [IRTRA](irtra.org.gt/) hostels in Guatemala. While it's not an official system, it aims to enhance the experience by including features like making reservations online, which the official site currently does not support.
+
+## Features
+- **Browse Hotel Information:** Explore basic details about the hotel, including location and amenities.
+- **Make Reservations:** Easily book your stay online.
+
+## Technologies Used
+- **Frontend:** JavaScript, React, Material UI, CSS
+- **Backend:** Node.js, Express, MySQL
+
+## Getting Started
+Follow these steps to run the project on your local machine:
+
+### Prerequisites
+- Node.js installed on your system
+- MySQL server running
+- A code editor (e.g., VS Code)
+
+### Installation
+1. Clone the repositories:
+   ```bash
+   git clone https://github.com/alegudiel/ReservationSystem.git
+   git clone https://github.com/alegudiel/ReservationSystem-Backend.git
+   ```
+2. Navigate to each project directory and install dependencies:
+   ```bash
+   cd ReservationSystem
+   npm install
+   cd ../ReservationSystem-Backend
+   npm install
+   ```
+
+### Running the Project
+1. Start the backend server:
+   ```bash
+   cd ReservationSystem-Backend
+   npm run dev
+   ```
+2. Open a new terminal and start the frontend:
+   ```bash
+   cd ReservationSystem
+   npm start
+   ```
+3. Open your browser and navigate to [http://localhost:3000](http://localhost:3000).
+
+## Project Structure
+
+### Frontend (`ReservationSystem`)
+```
+Reservation-System
+|-- src/
+|      |-- api/
+|      |-- Assets/
+|      |-- Components/
+|      |-- Containers/
+|      |-- Styles/
+|      |-- UI/
+|      |-- Utils/
+|-- App.js
+|-- Index.js
+```
+
+### Backend (`ReservationSystem-Backend`)
+```
+reservation-system-backend
+|-- src/
+|      |-- config/
+|      |-- controllers/
+|      |-- routes/
+|      |-- scripts/
+|      |-- types/
+|-- app.ts
+|-- .env
+```
 
 ## Available Scripts
 
-In the project directory, you can run:
+### Frontend
+#### `npm start`
+Starts the application in development mode.
+- Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- The page automatically reloads when you make changes.
+- Console displays any lint errors.
 
-### `npm start`
+### Backend
+#### `npm run dev`
+Starts the backend server using nodemon for live updates.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Acknowledgments
+- **IRTRA Hostels:** For inspiring the design and concept.
+- **Open-Source Tools:** A big thanks to the creators of the tools and libraries used in this project.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
